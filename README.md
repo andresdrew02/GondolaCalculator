@@ -2,7 +2,7 @@
 
 ## Descripción
 
-El proyecto **GondolaCalculator**, creado por Andrés, surge como una solución para simplificar y agilizar el proceso de cálculo de pedidos en la **Pizzería Gondola**. La idea detrás de esta aplicación es proporcionar a los clientes una herramienta fácil de usar que les permita calcular individualmente el costo de su pedido, incluyendo el subtotal, el cambio o el dinero que deben, y el total final. Esto surge como respuesta a un altercado previo relacionado con los cálculos de los cambios al hacer un pedido, lo que dejó claro la necesidad de una solución más eficiente y precisa.
+El proyecto **GondolaCalculator** 🍕, creado por Andrés 👨‍💻, surge como una solución para simplificar y agilizar el proceso de cálculo de pedidos en la **Pizzería Gondola** 🍽️. La idea detrás de esta aplicación es proporcionar a los clientes una herramienta fácil de usar que les permita calcular individualmente el costo de su pedido, incluyendo el subtotal, el cambio o el dinero que deben 💰, y el total final. Esto surge como respuesta a un altercado previo relacionado con los cálculos de los cambios al hacer un pedido, lo que dejó claro la necesidad de una solución más eficiente y precisa.
 
 ## Características
 
@@ -19,7 +19,7 @@ El proyecto **GondolaCalculator**, creado por Andrés, surge como una solución 
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone https://github.com/andresdrew02/GondolaCalculator.git
+   git clone https://github.com/tu-usuario/GondolaCalculator.git
    ```
 
 2. Accede al directorio del proyecto:
@@ -44,7 +44,7 @@ El proyecto **GondolaCalculator**, creado por Andrés, surge como una solución 
 
 ## Despliegue
 
-El proyecto GondolaCalculator ha sido desplegado en **Vercel**, lo que significa que puedes acceder a la aplicación en línea en cualquier momento. Puedes encontrar la versión desplegada en el siguiente enlace: [GondolaCalculator en Vercel](https://gondola-calculator.vercel.app/).
+El proyecto GondolaCalculator ha sido desplegado en **Vercel** 🚀, lo que significa que puedes acceder a la aplicación en línea en cualquier momento. Puedes encontrar la versión desplegada en el siguiente enlace: [GondolaCalculator en Vercel](https://gondola-calculator.vercel.app/).
 
 ## Contribuciones
 
@@ -54,4 +54,4 @@ El proyecto GondolaCalculator ha sido desplegado en **Vercel**, lo que significa
 
 Si tienes alguna pregunta, comentario o sugerencia sobre GondolaCalculator, no dudes en ponerte en contacto con el creador, Andrés, a través de su dirección de correo electrónico: andres@example.com.
 
-¡Esperamos que GondolaCalculator simplifique tus cálculos de pedidos en la Pizzería Gondola y haga que tu experiencia sea mucho más placentera!
+¡Esperamos que GondolaCalculator simplifique tus cálculos de pedidos en la Pizzería Gondola y haga que tu experiencia sea mucho más placentera! 🍽️🍕💰
