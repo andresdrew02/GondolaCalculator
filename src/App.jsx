@@ -5,7 +5,7 @@ import NewPersonaAndProductoForm from "./components/NewPersonaAndProductoForm";
 import Persona from "./classes/Persona";
 import TablaPedidos from "./components/TablaPedidos";
 import BarraNavegacion from "./components/BarraNavegacion";
-import { Button, Card, CardBody, Divider } from "@nextui-org/react";
+import { Button, Card, CardBody } from "@nextui-org/react";
 import Alert from "./components/Alert";
 import { generateRandomEmoji } from "./helpers/randomEmoji";
 import { calculateSubTotal } from "./helpers/calculateSubTotal";
@@ -14,7 +14,6 @@ import { ToastContainer, toast } from "react-toastify";
 import { ImCalculator } from "react-icons/im";
 import { AiFillCopy } from 'react-icons/ai'
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/Footer";
 
 export default function App() {
   const [pedido, setPedido] = useState(new Pedido(new Date(), []));
