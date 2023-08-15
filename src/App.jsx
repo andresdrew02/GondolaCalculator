@@ -139,7 +139,7 @@ export default function App() {
             <div className="flex flex-col md:flex-row gap-6 items-center mt-5">
               <h2 className="mb-2 text-xl font-semibold text-gray-800 mt-4">
                 Total de los totales:{" "}
-                <strong className="text-red-700">{total} € </strong>
+                <strong className="text-red-700">{total.toFixed(2)} € </strong>
               </h2>
               <Button
                 color="success"

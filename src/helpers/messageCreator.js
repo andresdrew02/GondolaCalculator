@@ -12,6 +12,6 @@ export function messageCreator(pedido, total) {
         mensaje += "*Subtotal de " + set.persona.nombre + ":* " + calculateSubTotal(set.productos) + " €\n"
         mensaje += "\n\n"
     })
-    mensaje += "*Total de los totales: " + total + " €*";
+    mensaje += "*Total de los totales: " + total.toFixed(2) + " €*";
     return mensaje
 }
