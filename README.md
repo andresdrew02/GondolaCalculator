@@ -52,6 +52,6 @@ El proyecto GondolaCalculator ha sido desplegado en **Vercel** 🚀, lo que sign
 
 ## Contacto
 
-Si tienes alguna pregunta, comentario o sugerencia sobre GondolaCalculator, no dudes en ponerte en contacto con el creador, Andrés, a través de su dirección de correo electrónico: andres@example.com.
+Si tienes alguna pregunta, comentario o sugerencia sobre GondolaCalculator, no dudes en ponerte en contacto con el creador, Andrés, a través de su dirección de correo electrónico: pointed@parguelassinfronteras.com
 
 ¡Esperamos que GondolaCalculator simplifique tus cálculos de pedidos en la Pizzería Gondola y haga que tu experiencia sea mucho más placentera! 🍽️🍕💰
