@@ -139,7 +139,7 @@ export default function App() {
                       e.persona.nombre.slice(1)}
                     :{" "}
                     <strong className="text-purple-700">
-                      {calculateSubTotal(e.productos)} €{" "}
+                      {calculateSubTotal(e.productos).toFixed(2)} €{" "}
                     </strong>
                   </h2>
                 </div>

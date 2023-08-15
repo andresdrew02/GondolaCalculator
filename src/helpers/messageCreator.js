@@ -9,7 +9,7 @@ export function messageCreator(pedido, total, nota) {
         })
         mensaje += "*Pone: " + set.dinero + "€*\n";
         mensaje += calculateSubTotal(set.productos) > parseFloat(set.dinero) ? "*Debe: " + Math.abs(calculateSubTotal(set.productos) - parseFloat(set.dinero)).toFixed(2) +"€*\n" : "*Cambio: " + Math.abs(calculateSubTotal(set.productos) - parseFloat(set.dinero)).toFixed(2) + "€*\n"
-        mensaje += "*Subtotal de " + set.persona.nombre + ":* " + calculateSubTotal(set.productos) + " €\n"
+        mensaje += "*Subtotal de " + set.persona.nombre + ":* " + calculateSubTotal(set.productos).toFixed(2) + " €\n"
         mensaje += "\n\n"
     })
     mensaje += "*Nota opcional:* " + nota + "\n\n"
