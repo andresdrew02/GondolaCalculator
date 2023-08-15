@@ -15,7 +15,7 @@ export default function TablaPedidos({ pedido }) {
     }
 
   return (
-    <Table aria-label="Tabla del pedido del gondola" onClick={() => console.log(pedido)}>
+    <Table aria-label="Tabla del pedido del gondola">
       <TableHeader>
         <TableColumn>Nombre</TableColumn>
         <TableColumn>Pedido</TableColumn>
@@ -23,7 +23,7 @@ export default function TablaPedidos({ pedido }) {
       </TableHeader>
       <TableBody>
         {pedido.setPedidos.map((e, i) => (
-          <TableRow key={e.id}>
+          <TableRow key={i}>
             <TableCell>{e.persona.nombre}</TableCell>
             <TableCell>
               {e.productos.map((producto) => producto.nombre).join(", ")}

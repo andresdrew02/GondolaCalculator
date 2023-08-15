@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Pedido from "./classes/Pedido";
 import SetPedido from "./classes/SetPedido";
 import NewPersonaAndProductoForm from "./components/NewPersonaAndProductoForm";
 import Persona from "./classes/Persona";
 import TablaPedidos from "./components/TablaPedidos";
 import BarraNavegacion from "./components/BarraNavegacion";
-import { Button, Card, CardBody } from "@nextui-org/react";
+import { Button, Card, CardBody, Input, Textarea } from "@nextui-org/react";
 import Alert from "./components/Alert";
 import { generateRandomEmoji } from "./helpers/randomEmoji";
 import { calculateSubTotal } from "./helpers/calculateSubTotal";
@@ -21,6 +21,7 @@ export default function App() {
   const [error, setError] = useState(false);
   const [mensajeError, setErrorMensaje] = useState("Error por defecto");
   const [total, setTotal] = useState(0);
+  const nota = useRef()
   const notify = () =>
     toast.success("¡Copiado al portapapeles!", {
       theme: "colored",
@@ -68,19 +69,27 @@ export default function App() {
           <TablaPedidos pedido={pedido} />
         </div>
         {pedido.setPedidos.length > 0 && (
-          <Button color="secondary" onClick={calcularPedido} startContent={<ImCalculator/>}>
-            Calcular Pedido
-          </Button>
+          <div className="flex flex-col gap-2 max-w-md">
+            <Button color="secondary" onClick={calcularPedido} startContent={<ImCalculator />}>
+              Calcular Pedido
+            </Button>
+            <Textarea
+              label="Nota opcional"
+              labelPlacement="outside"
+              placeholder="Nota opcional"
+              ref={nota}
+            />
+          </div>
         )}
 
         {calculado && (
           <>
-            <h1 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white mt-4">
+            <h1 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white mt-4">
               Pedido calculado:
             </h1>
             <div className="flex flex-col gap-6">
               {pedido.setPedidos.map((e, i) => (
-                <div>
+                <div key={i}>
                   <h1
                     key={i}
                     className="mb-2 text-lg font-semibold text-gray-700"
@@ -141,18 +150,23 @@ export default function App() {
                 Total de los totales:{" "}
                 <strong className="text-red-700">{total.toFixed(2)} € </strong>
               </h2>
-              <Button
-                color="success"
-                className="text-white font-bold"
-                onClick={() => {
-                  navigator.clipboard.writeText(messageCreator(pedido, total));
-                  notify();
-                }}
-                endContent={<AiFillCopy/>}
-              >
-                Copiar mensaje para WhatsApp
-              </Button>
+              {nota.current.value !== "" && (
+                <h2 className="mb-2 text-xl font-semibold text-gray-800 mt-4">
+                  Nota opcional: {nota.current.value}
+                </h2>
+              )}
             </div>
+            <Button
+              color="success"
+              className="text-white font-bold mt-4 w-full md:max-w-md"
+              onClick={() => {
+                navigator.clipboard.writeText(messageCreator(pedido, total, nota.current.value));
+                notify();
+              }}
+              endContent={<AiFillCopy />}
+            >
+              Copiar mensaje para WhatsApp
+            </Button>
           </>
         )}
       </main>

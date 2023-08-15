@@ -128,8 +128,8 @@ export default function NewPersonaAndProductoForm({ addHandler }) {
                   <Input
                     isRequired
                     type="text"
-                    label="Nombre del localero"
-                    placeholder="Samuel Drogados"
+                    label="Nombre del cliente"
+                    placeholder="Samuel Bragado"
                     className="max-w-xs"
                     onChange={() => setErrorNombre(false)}
                     ref={nombre}

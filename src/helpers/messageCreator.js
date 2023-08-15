@@ -1,6 +1,6 @@
 import { calculateSubTotal } from "./calculateSubTotal";
 
-export function messageCreator(pedido, total) {
+export function messageCreator(pedido, total, nota) {
     let mensaje = "*Pedido del " + pedido.fecha.getDate() + "/" + (pedido.fecha.getMonth() + 1) + "/" + pedido.fecha.getFullYear() + "*\n";
     pedido.setPedidos.forEach((set) => {
         mensaje += "*" + set.persona.nombre.charAt(0).toUpperCase().concat(set.persona.nombre.slice(1)) + "*" + "\n";
@@ -12,6 +12,7 @@ export function messageCreator(pedido, total) {
         mensaje += "*Subtotal de " + set.persona.nombre + ":* " + calculateSubTotal(set.productos) + " €\n"
         mensaje += "\n\n"
     })
+    mensaje += "*Nota opcional:* " + nota + "\n\n"
     mensaje += "*Total de los totales: " + total.toFixed(2) + " €*";
     return mensaje
 }
