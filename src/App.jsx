@@ -55,7 +55,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <ToastContainer />
       <BarraNavegacion />
       {error && (
@@ -158,6 +158,6 @@ export default function App() {
         )}
       </main>
       <Footer/>
-    </>
+    </div>
   );
 }
