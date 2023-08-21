@@ -5,7 +5,7 @@ export function messageCreator(pedido, total, nota) {
     pedido.setPedidos.forEach((set) => {
         mensaje += "*" + set.persona.nombre.charAt(0).toUpperCase().concat(set.persona.nombre.slice(1)) + "*" + "\n";
         set.productos.forEach((producto) => {
-            mensaje += "_" + producto.nombre + "_" + " ➡️ " + producto.precio + "€\n";
+            mensaje += "_" + producto.nombre.trim() + "_" + " ➡️ " + producto.precio + "€\n";
         })
         mensaje += "*Pone: " + set.dinero + "€*\n";
         mensaje += calculateSubTotal(set.productos) > parseFloat(set.dinero) ? "*Debe: " + Math.abs(calculateSubTotal(set.productos) - parseFloat(set.dinero)).toFixed(2) +"€*\n" : "*Cambio: " + Math.abs(calculateSubTotal(set.productos) - parseFloat(set.dinero)).toFixed(2) + "€*\n"
